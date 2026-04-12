@@ -1,0 +1,6 @@
+Aquí ira cada carpeta con las principalers cuestiones
+(Proyecto-Kotlin)
+(Proyecto Back - .net 10)
+(Proyecto Front React)
+(Documentación)
+(Diagrama)
