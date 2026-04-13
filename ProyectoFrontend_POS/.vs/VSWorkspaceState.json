@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\features",
+    "\\src\\features\\payments",
+    "\\src\\features\\payments\\components",
+    "\\src\\features\\payments\\hooks",
+    "\\src\\features\\payments\\pages",
+    "\\src\\features\\payments\\services",
+    "\\src\\pages",
+    "\\src\\utils"
+  ],
+  "SelectedNode": "\\src\\features\\payments\\services\\paymentService.ts",
+  "PreviewInSolutionExplorer": false
+}
