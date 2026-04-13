@@ -3,4 +3,4 @@ Aquí ira cada carpeta con las principalers cuestiones
 (Proyecto Back - .net 10)
 (Proyecto Front React)
 (Documentación)
-(Diagrama)
+(Diagrama) Pablito clavo un clavito en la calva de un calvito
