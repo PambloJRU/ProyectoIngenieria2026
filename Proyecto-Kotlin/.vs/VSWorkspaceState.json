@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\app",
+    "\\app\\src",
+    "\\app\\src\\main",
+    "\\app\\src\\main\\java",
+    "\\app\\src\\main\\java\\com",
+    "\\app\\src\\main\\java\\com\\gruposinpe",
+    "\\app\\src\\main\\java\\com\\gruposinpe\\proyectosinpe_kotlin",
+    "\\app\\src\\main\\java\\com\\gruposinpe\\proyectosinpe_kotlin\\receiver",
+    "\\app\\src\\main\\java\\com\\gruposinpe\\proyectosinpe_kotlin\\service"
+  ],
+  "SelectedNode": "\\app\\src\\main\\java\\com\\gruposinpe\\proyectosinpe_kotlin\\network\\ApiService.kt",
+  "PreviewInSolutionExplorer": false
+}
