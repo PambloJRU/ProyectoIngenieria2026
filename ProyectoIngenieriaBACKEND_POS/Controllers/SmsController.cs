@@ -35,5 +35,11 @@ namespace ProyectoIngenieriaBACKEND_POS.Controllers
 
             return StatusCode(500, new { message = "Error interno procesando el SMS." });
         }
+
+        [HttpGet("testjson")]
+        public async Task<IActionResult> TestJson()
+        {
+            return Ok(new { mensaje = "hola" });
+        }
     }
 }

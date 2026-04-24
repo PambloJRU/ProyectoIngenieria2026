@@ -1,3 +1,3 @@
-/ package: features/payments/components
+// package: features/payments/components
 
-// TODO: Mostrar información de un pago
+// TODO: Mostrar informaciï¿½n de un pago

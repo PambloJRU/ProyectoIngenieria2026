@@ -1,5 +1,5 @@
 package com.gruposinpe.proyectosinpe_kotlin.network
-import com.android.volley.Response
+import retrofit2.Response
 import com.gruposinpe.proyectosinpe_kotlin.model.SmsRequest
 import okhttp3.ResponseBody
 import retrofit2.http.Body
