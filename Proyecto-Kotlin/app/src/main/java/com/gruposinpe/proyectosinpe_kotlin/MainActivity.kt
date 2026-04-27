@@ -1,5 +1,8 @@
 package com.gruposinpe.proyectosinpe_kotlin
 
+import android.Manifest
+import android.content.pm.PackageManager
+import android.os.Build
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -26,6 +29,8 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.ui.unit.dp
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import com.gruposinpe.proyectosinpe_kotlin.model.SmsRequest
 import com.gruposinpe.proyectosinpe_kotlin.network.RetrofitClient
 
@@ -33,6 +38,9 @@ import com.gruposinpe.proyectosinpe_kotlin.network.RetrofitClient
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        requestSmsPermission()
+
         enableEdgeToEdge()
         setContent {
             Column(
@@ -50,6 +58,21 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+    }
+
+    //Pedir permisos para leer SMS
+    private fun requestSmsPermission(){
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
+            if(ContextCompat.checkSelfPermission(
+                this, Manifest.permission.RECEIVE_SMS
+            ) != PackageManager.PERMISSION_GRANTED
+            ){
+                ActivityCompat.requestPermissions(
+                    this, arrayOf(Manifest.permission.RECEIVE_SMS), 100
+                )
+            }
+        }
+
     }
 
     private fun enviarPruebaAlServidor() {

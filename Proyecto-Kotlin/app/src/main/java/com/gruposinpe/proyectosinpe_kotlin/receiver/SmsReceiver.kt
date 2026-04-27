@@ -31,11 +31,22 @@ class SmsReceiver : BroadcastReceiver() {
                             SmsMessage.createFromPdu(pdu as ByteArray)
                         }
 
-                        Log.d(TAG, "Mensaje recibido")
+                        val sender = smsMessage.originatingAddress ?: ""
+                        val message = smsMessage.messageBody ?: ""
 
-                        if (context != null) {
-                            Toast.makeText(context, "SMS Recibido", Toast.LENGTH_SHORT).show()
+                        Log.d(TAG, "Origen: $sender")
+                        Log.d(TAG, "Mensaje: $message")
+
+                        val normalizeSender = sender.replace("-", "").replace(" ", "")
+
+                        if(normalizeSender.endsWith("60405995")){
+                            Log.d(TAG, "Mensaje del Banco nacional recibido")
+
+                            if (context != null) {
+                                Toast.makeText(context, "SMS BNCR Recibido", Toast.LENGTH_SHORT).show()
+                            }
                         }
+
                     }
                 } catch(e: Exception){
                     Log.e(TAG, "Error: ${e.message}")
@@ -44,5 +55,3 @@ class SmsReceiver : BroadcastReceiver() {
         }
     }
 }
-
-// TODO: Implementar BroadcastReceiver para escuchar SMS de SINPE Móvil
